@@ -1,0 +1,245 @@
+/* -- IMPORTS FONTS --  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* -- VARIABLES --  */
+
+/* -- RESET --  */
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    color: white;
+}
+
+/* -- BASIC STYLE --  */
+nav {
+    background-color: rgb(12, 12, 12);
+}
+body {
+    background-color: rgb(38, 40, 44);
+}
+
+/* -- MOBILE --  */
+
+@media only screen and (max-width: 1200px) {
+
+    /* CABEÇALHO + NAV BAR */
+
+    header {
+        height: auto;
+        
+    }
+    nav {
+        width: 80px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 40px;
+        padding-top: 0;
+        transition: all 1s;
+    }
+    nav:hover {
+        width: 300px;
+        height: 100%;
+        transition: all 1s;
+    }
+    nav:hover div{
+        margin-left: 0;
+        transition: all 1s;
+    }
+    nav div {
+        font-size: 3em;
+        margin: 40px 0; 
+        margin-left: -400px;
+        transition: all 1s;
+    }
+    nav div:first-child{
+        margin-left:0
+    }
+    #logo, #menu {
+        width: 80px;
+    }
+    #logo{
+        margin-left: calc(50% - 40px);
+        margin-top: 40px;
+    }
+    #menu {
+        margin-top: 0;
+    }
+
+    /* TAG MAIN + SECTION TEXTO PRINCIPAL */
+
+    main {
+        display: block;
+        padding-left: 150px;
+    }
+    #main-text {
+        height: auto;
+        justify-content: center;
+        padding: 70px 12px 80px 30px;
+    }
+    p {
+        font-size: 0.8em;
+    }
+    #main-text p::first-letter {
+        font-size: 6em;
+        padding: 3px 6px;
+        margin-right: 8px;
+        float: left;
+        font-weight: bold;
+        color: white;
+        border: solid 1px white;
+        background-color: rgb(12, 12, 12);
+    }
+
+    /* SECTION DAS NOTÍCIAS + IMAGENS */
+
+    #noticias {
+        height: auto;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px 30px 30px;
+    }
+    .imagens {
+        height: 600px;
+        width: 750px;
+    }
+    article {
+        background-color: rgb(54, 56, 61);
+        padding: 15px 15px;
+        width: 750px;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    h1 {
+        font-size: 1em;
+        padding: 15px 0px;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+        height: auto;
+        background-color: rgb(12, 12, 12);
+        text-align: center; 
+    }
+    #icon-copy {
+        width: 25px;
+        height: 25px;
+        padding-right: 5px;
+    }
+}
+
+/* -- DESKTOP --  */
+
+@media only screen and (min-width: 1200px) {
+
+    /* CABEÇALHO + NAV BAR */
+
+    #menu {
+       display: none;
+    }
+    #logo {
+       width: 40px;
+       margin: 0;
+       margin-left: 40px; 
+    }
+    header {
+       width: 100%;
+       height: auto;
+       display: flex;
+       justify-content: space-between;
+       background: rgb(12, 12, 12);
+    }
+    nav {
+       position: relative;
+       width: auto;
+       transition: none;
+       display: flex;
+       padding: 0;
+       transition: none;
+    }
+    nav div{
+       margin: 40px;
+       font-size: 1em;
+       font-weight: bold;
+       transition: none;
+    }
+    nav:hover {
+        width: auto;
+        height: auto;
+        transition: none;
+    }   
+    nav:hover div{
+        margin: 40px;
+        transition: none;
+    }
+    nav:hover div:first-child {
+        margin:20px;
+    }
+    
+    /* TAG MAIN + SECTION TEXTO PRINCIPAL */
+
+    main {
+        display: block;
+    }
+    #main-text {
+        height: auto;
+        justify-content: center;
+        padding: 30px 12px 80px 30px;
+    }
+    #main-text p::first-letter {
+        font-size: 3em;
+        padding: 3px 6px;
+        margin-right: 8px;
+        float: left;
+        font-weight: bold;
+        color: white;
+        border: solid 1px white;
+        background-color: rgb(12, 12, 12);
+    }
+
+    /* SECTION DAS NOTÍCIAS + IMAGENS */
+
+    #noticias {
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px 30px 30px;  
+    }
+    article {
+        background-color: rgb(54, 56, 61);
+        padding: 15px 15px;
+        width: 400px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    h1 {
+        font-size: 1em;
+        padding: 15px 0px;
+    }
+
+    /* RODAPÉ */
+    
+    footer {
+        height: 20px;
+        background-color: rgb(12, 12, 12);
+        text-align: center;   
+    }
+    .imagens {
+        height: 280px;
+        width: 400px;
+    }
+    #icon-copy {
+        width: 10px;
+        height: 10px;
+        padding-right: 5px;
+    }
+}
